@@ -1,0 +1,31 @@
+        body{
+            background-color: grey;
+            font-size: 20px;
+        }
+        #div{
+            width: 200px;
+            margin: 10px;
+            border: 2px black solid;
+            background-color: red;
+
+            text-align: center;
+            padding: 50px 10px 0 10px;
+        }
+
+        #div1{
+            width: 200px;
+            margin: 10px;
+            padding: 40px 0px 40px 0px ;
+            border: 2px black solid;
+            background-color: green;
+            text-align: center;
+        }
+
+        .div2{
+            width: 200px;
+
+            margin: 10px;
+            padding: 0px 0px 50px 10px;
+            border: 2px black solid;
+            background-color: blue;
+        }

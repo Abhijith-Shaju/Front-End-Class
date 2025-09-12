@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: aliceblue;
+        }
+
+        header{
+            padding: 30px 0px 30px 0px;
+            background-color: rgb(83, 181, 83);
+            color: azure;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav{
+            display: flex;
+            gap: 20px;
+
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+        }
+
+        main{
+            padding: 20px;
+        }
+        .main-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+        }
+
+        .main-grid div{
+            height: 200px;
+            width: 500px;
+            padding: 20px;
+
+            box-shadow: 0px 4px rgb(0, 0, 0, 0.15);
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .main-grid div h3{
+            color: green;
+        }
+
+        footer{
+            width: 100%;
+            background-color: black;
+            color: aliceblue;
+            padding: 25px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>
+            Welcome to Your Website Task
+        </h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-grid">
+            <div id="about">
+                <h3>About CSS</h3><br>
+                this is the about. this is some sample text. this is some sample text. this is some sample text.
+            </div>
+            <div id="model">
+                <h3>Box Model</h3><br>
+                this is the box model. this is some sample text. this is some sample text.
+            </div>
+            <div id="design">
+                <h3>About CSS</h3><br>
+                this is the design. this is some sample text. this is some sample text.
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Created by Abhijith Shaju.</p>
+    </footer>
+    
+</body>
+</html>

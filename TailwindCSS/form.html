@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-100">
+    <div class="flex justify-center w-full p-5">
+
+        <form action="" class="w-175 h-auto mt-10 p-10 justify-center bg-white rounded shadow-md">
+            
+            <h3 class="text-center text-4xl font-bold p-4 m-3">Contact Form</h3>
+
+            <label class="block font-medium text-xl mt-4" for="name">Name</label>
+            <input class="mt-2 border-1 border-gray-400 w-full rounded-sm p-2 focus:border-blue-500 focus:border-2" type="text" id="name" name="name" placeholder="eg. Joe Smith">
+            
+            <label class="block font-medium text-xl mt-4" for="email">Email</label>
+            <input class="mt-2 border-1 border-gray-400 w-full rounded-sm p-2 focus:border-blue-500 focus:border-2" type="email" name="email" id="email" placeholder="eg. joe.smith@gmail.com">
+            
+            <label class="block font-medium text-xl mt-4" for="message">Message</label>
+            <textarea class="h-50 mt-2 border-1 border-gray-400 w-full rounded-sm p-2 focus:border-blue-500 focus:border-2" name="message" id="message" placeholder="Write your Message here."></textarea>
+            
+            <button type="submit" class="block w-full mt-5 p-5 bg-blue-500 rounded text-white font-bold hover:bg-blue-700 hover:shadow-md transition"> Send Message </button>
+
+        </form>
+    
+    </div>
+</body>
+</html>

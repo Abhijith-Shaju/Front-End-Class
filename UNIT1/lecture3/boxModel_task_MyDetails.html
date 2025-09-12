@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Details</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(61, 44, 23);
+            padding-top: 10%;
+        }
+
+        #main{
+            display: flex;
+            /* flex-direction: column; */
+            height: 500px;
+            margin: 30px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(207, 170, 121);
+
+            border: 10px solid rgb(129, 99, 59);
+        }
+
+        .intro{
+            margin: 50px;
+            height: auto;
+            width: 1000px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .intro p{
+            width: 700px;
+            margin-left: 50px;
+            line-height: 1.2em;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .details{
+            height: auto;
+            width: 1000px;
+            margin-left: 20px;
+        }
+
+        .school{
+            margin: 20px;
+            padding: 15px 10px 15px 10px;
+            border: 1px dashed rgb(129, 99, 59);
+        }
+
+        .school p{
+            margin-left: 30px;
+            font-size: 1.1em;
+            color: rgba(0, 0, 0, 0.7);
+
+        }
+
+        h3{
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"> 
+        <div class="intro">
+            <h1>Abhijith Shaju</h1>
+            <p>
+                My name is Abhijith Shaju. <br />
+                I study in Lovely Professional University.<br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis est ratione ad repellendus cupiditate ab velit adipisci nostrum necessitatibus tempore! A voluptas id unde autem suscipit quia tempore quibusdam iste!
+            </p>
+        </div>
+
+        <div class="details">
+            <div class="school">
+                <h3>The Asian School Bahrain</h3>
+                <p>I have studied in "The Asian School Bahrain" till my 3<sup>rd</sup> grade.</p>
+            </div>
+            <div class="school">
+                <h3>The Indian School Bahrain</h3>
+                <p>I have completed my high school studies in "The Indian School Bahrain"</p>
+            </div>
+            <div class="school">
+                <h3>Lovely Professional University</h3>
+                <p>Current Pursuing BTech in LPU.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Portfolio
+Heading (name)
+image of ourself ( /any image)
+para of intro
+list of hobbies(atleast 3)
+link of linkedin ( /any)
