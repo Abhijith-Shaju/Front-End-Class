@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <style>
+        *{
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100">
+    <header class="flex p-5 justify-between items-center mx-auto">
+        <h1 class="text-2xl font-extrabold ">WanderLust.</h1>
+        <nav class="space-x-10 flex">
+            <a href="">Home</a>
+            <a href="">Destination</a>
+            <p id="about"> About Us </p>
+            <ul id="about-drop" class="absolute top-13 left-250 w-auto bg-slate-700 text-white font-bold p-8 flex flex-col justify-between space-y-5 rounded-xl hidden">
+                <li><a href="#feature"> Features </a></li>
+                <hr>
+                <li><a href="#newsLetter"> NewsLetter </a></li>
+            </ul>
+            <a href="">Contact</a>
+        </nav>
+        <button>Subscribe</button>
+    </header>
+
+    <main class="w-screen h-auto">
+
+        <div id="hero" class="w-full h-250">
+            <div class="h-full w-screen p-0 m-0 bg-cover bg-[url('https://ik.imgkit.net/3vlqs5axxjf/TAW/ik-seo/uploadedImages/Content-Travel_Types/Adventure_Travel/Features/ATTA%20Trends_HERO/The-Latest-Trends-in-Adventure-Travel.jpg?tr=w-1008%2Ch-567%2Cfo-auto')]">
+                <div id="blackOverlay" class="bg-black/50 w-full h-full flex flex-col justify-center items-center">
+                    <p class="text-6xl font-bold text-white text-center ">Explore the World,<br /> One Journey at a Time.</p>
+                    <button class="text-3xl font-bold text-white mt-15 ">Read Our Stories</button>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-3xl font-bold text-center mt-20">Featured Stories</h3>
+        
+        <div id="feature" class="grid grid-cols-3 p-10 px-50 gap-20 h-150 w-full justify-center items-center">
+
+            <div class="bg-white rounded-xl h-150 p-4 flex flex-col shadow-lg hover:shadow-2xl duration-500">
+                <img src="https://www.tourmyindia.com/states/ladakh/imagess/adventure-tourism-ladakh1.jpg" alt="Ladakh" class="rounded-lg">
+                <p class="text-gray-950/60 py-4">Ladakh, India</p>
+                <h4 class="text-2xl font-bold underline mb-4">The View Of Ladakh</h4>
+                <p>this is a very beautiful place, blah blah placeholder text, ill add something later</p>
+                <p class="text-center mt-25 text-xl text-gray-950/40 hover:-translate-y-1 duration-200 underline underline-offset-5">Read more</p>
+            </div>
+            <div class="bg-white rounded-xl h-150 p-4 flex flex-col shadow-lg hover:shadow-2xl duration-500">
+                <img src="https://www.tourmyindia.com/states/ladakh/imagess/adventure-tourism-ladakh1.jpg" alt="Ladakh" class="rounded-lg">
+                <p class="text-gray-950/60 py-4">Ladakh, India</p>
+                <h4 class="text-2xl font-bold underline mb-4">The View Of Ladakh</h4>
+                <p>this is a very beautiful place, blah blah placeholder text, ill add something later</p>
+                <p class="text-center mt-25 text-xl text-gray-950/40 hover:-translate-y-1 duration-200 underline underline-offset-5">Read more</p>
+            </div>
+            <div class="bg-white rounded-xl h-150 p-4 flex flex-col shadow-lg hover:shadow-2xl duration-500">
+                <img src="https://www.tourmyindia.com/states/ladakh/imagess/adventure-tourism-ladakh1.jpg" alt="Ladakh" class="rounded-lg">
+                <p class="text-gray-950/60 py-4">Ladakh, India</p>
+                <h4 class="text-2xl font-bold underline mb-4">The View Of Ladakh</h4>
+                <p>this is a very beautiful place, blah blah placeholder text, ill add something later</p>
+                <p class="text-center mt-25 text-xl text-gray-950/40 hover:-translate-y-1 duration-200 underline underline-offset-5">Read more</p>
+            </div>
+        </div>
+
+        <div id="newsLetter" class="mt-30">
+            <h2 class="text-2xl font-bold text-center">Join Our Adventure!</h2>
+            <p class="text-lg text-center text-gray-700 mt-4 w-250 mx-auto">
+                Subscribe to our newsletter for the latest travel stories, tips, and exclusive offers. Be the first to know about our new adventures and join a community of fellow wanderers!
+            </p>
+
+
+            <form action="">
+                
+            </form>
+        </div>
+        
+
+    </main>
+    
+    <footer class="bg-slate-600 h-32 w-screen mt-20"></footer>
+
+    <script>
+        const abt = document.getElementById('about');
+        const abt_drop = document.getElementById('about-drop');
+
+        abt.addEventListener('click', () =>{
+            abt_drop.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>
