@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <div class="h-screen w-screen bg-gray-50 flex flex-col justify-center items-center">
+        <div class="w-2/3 h-3/5 bg-white shadow-2xl p-8 m-4 rounded-lg">
+            <h1 class="text-center font-bold text-3xl">Calculator</h1>
+            
+            <div class="flex flex-row w-full items-center p-4 mt-2">
+                <div class="text-center flex-1">
+                    <input type="text" id="num1" placeholder="ENter the 1st number" class="border-1 p-2 rounded-lg m-2 text-xl">
+                    <input type="text" id="num2" placeholder="ENter the 2nd number" class="border-1 p-2 rounded-lg m-2 text-xl">
+                </div>
+                <p id="result" class="flex-1 text-center font-bold text-2xl border-1 border-gray-500 p-2 rounded-lg bg-gray-100"> Result </p>
+            </div>
+            <div class="grid grid-cols-2 h-2/3 gap-4 p-6">
+                <button onclick="add()" class="text-center shadow-lg rounded-2xl border-1">+</button>
+                <button onclick="sub()" class="text-center shadow-lg rounded-2xl border-1">-</button>
+                <button onclick="mul()" class="text-center shadow-lg rounded-2xl border-1">*</button>
+                <button onclick="div()" class="text-center shadow-lg rounded-2xl border-1">/</button>
+                <button onclick="mod()" class="text-center shadow-lg rounded-2xl border-1 col-span-2">%</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function add(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let Ans = num1+num2;
+            
+            document.getElementById("result").innerText = "The addition = " + Ans;
+        }
+        function sub(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let Ans = num1-num2;
+            
+            document.getElementById("result").innerText = "The subtraction = " + Ans;
+        }
+        function mul(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let Ans = num1*num2;
+            
+            document.getElementById("result").innerText = "The multiplication = " + Ans;
+        
+        }
+        function div(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let Ans = num1/num2;
+            
+            document.getElementById("result").innerText = "The division = " + Ans;
+        
+        }
+        function mod(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let Ans = num1%num2;
+            
+            document.getElementById("result").innerText = "The modulus = " + Ans;
+        
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
