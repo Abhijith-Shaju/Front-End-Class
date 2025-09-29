@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-screen h-auto bg-gray-100">
+        <div class="mx-auto w-2/5 h-96 bg-white rounded-2xl shadow-2xl mt-16 p-8">
+            <h1>Contact US</h1>
+
+            <button onclick="enterName()">Enter Name:</button><br>
+
+            <button onclick="submit()">Submit</button>
+        </div>
+
+        <script>
+            let userName;
+            function enterName(){
+                userName = prompt("Enter your name");
+            }
+
+            function submit(){
+                let x = confirm("You want to submit?");
+                if(x){
+                    alert("form submitted, your name is " + userName);
+                }else{
+                    alert("Submission canceled");
+                }
+            }
+
+
+        </script>
+</body>
+</html>

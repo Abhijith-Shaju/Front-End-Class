@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="w-full h-screen flex flex-col justify-center p-8 bg-gray-100">
+        <div id="stopwatch" class="w-200 h-100 bg-white rounded-xl shadow-2xl ">
+            <span class="px-2" id="hr">00</span>:
+            <span class="px-2" id="min">00</span>:
+            <span class="px-2" id="sec">00</span>:
+            <span class="px-2" id="mil">00</span>
+        </div>
+    </div>
+
+    <script>
+        const hour = document.getElementById("hr");
+        const minute = document.getElementById("min");
+        const second = document.getElementById("sec");
+        const mili = document.getElementById("mil");
+        
+    </script>
+    
+</body>
+</html>

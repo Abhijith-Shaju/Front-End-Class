@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Variable</h2>
+    <script>
+        var name = "aBC";
+        let age = 32;
+
+        const pi = 3.14159;
+
+        console.log("Name: ", name);
+        console.log("Age: ", age);
+        console.log("PI: ", pi);
+
+
+        let x = 10;
+
+        x += 10;
+        console.log(x);
+
+        x -= 10;
+        console.log(x);
+        
+        x *= 10;
+        console.log(x);
+        
+        x /= 10;
+        console.log(x);
+
+        if(age > 18){
+            console.log("You are adult");
+        }else{
+            console.log("You a kid");
+        }
+
+
+        let year = 2024;
+        if(year % 4 == 0 && year % 100 != 0){
+            console.log("Leap year");
+        }else if(year % 400 == 0) {
+            console.log("Leap year")
+        }else{
+            console.log("Not leap year");
+        }
+
+        let score = 85;
+
+        if(score >= 90) {
+            console.log("Grade A");
+        }else if(score >= 75){
+            console.log("Grade B");
+        }else if(score >= 50){
+            console.log("Grade C");
+        }else{
+            console.log("Fail");
+        }
+
+    </script>
+    
+</body>
+</html>
