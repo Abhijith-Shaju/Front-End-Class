@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+
+    <div class="w-32 h-32 p-8 bg-amber-300" id="div"></div>
+    
+    <script>
+        document.getElementById('div').onmouseover = () => {
+            document.getElementById('div').style.backgroundColor = "red";
+        }
+        document.getElementById('div').onmouseout = () => {
+            document.getElementById('div').style.backgroundColor = "blue";
+        }
+
+        document.getElementById('div').onmousedown = () => {
+            document.getElementById('div').style.backgroundColor = "green";
+        }
+
+    </script>
+</body>
+</html>

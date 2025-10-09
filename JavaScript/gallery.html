@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8">
+
+    <div  class=" m-10 border-1 h-96">
+        <img src="../Resources/img2.jpg" alt="" id="mainImg" class="h-full mx-auto">
+    </div>
+
+    <div class="flex gap-2 justify-center">
+
+        <img src="../Resources/img1.jpg" alt="" onclick="change(this)" class=" h-32">
+        <img src="../Resources/img2.jpg" alt="" onclick="change(this)" class=" h-32">
+        <img src="../Resources/img3.jpg" alt="" onclick="change(this)" class=" h-32">
+        
+    </div>
+    <script>
+        function change(img){
+            document.getElementById("mainImg").src = img.src;
+        }
+    </script>
+</body>
+</html>

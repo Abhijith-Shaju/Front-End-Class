@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 text-3xl">
+
+    <form action="">
+        <select name="colour" id="colour">
+            <option value="red">RED</option>
+            <option value="green">GREEN</option>
+            <option value="blue">BLUE</option>
+        </select>
+        <p id="para"></p>
+    </form>
+    
+    <script>
+        document.getElementById('colour').onchange = () => {
+            document.getElementById('para').innerText = `The selected colour is ${colour.value}`
+            document.getElementById('para').style.color = `${colour.value}`
+
+        };
+    </script>
+</body>
+</html>
