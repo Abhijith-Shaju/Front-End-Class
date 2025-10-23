@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="w-1/2 bg-white shadow-2xl rounded-3xl m-8 mx-auto p-8 flex flex-col items-center">
+        <h2 class="text-3xl font-bold text-center my-8">Get Your Location</h2>
+
+        <button onclick="getlocation()" class="w-2/3 rounded-3xl bg-green-600 p-2 text-white text-lg font-bold hover:bg-green-800 duration-200 hover:text-xl hover:p-3"> Get Location</button>
+
+        <div id="info" class="hidden border-2 rounded-3xl p-8 m-8 w-2/3 text-xl">
+            <p>Latitude: <span id="lat"></span></p>
+            <p>Longitude: <span id="log"></span></p>
+            <p>Accuracy: <span id="acc"></span>meters</p>
+            <p>Address: <span id="address">Loading...</span></p>
+        </div>
+
+        <div id="error" class=""></div>
+    </div>
+
+    <script>
+        async function getlocation(){
+            const info = document.getElementById('info');
+            const lat = document.getElementById('lat');
+            const log = document.getElementById('log');
+            const acc = document.getElementById('acc');
+            const address = document.getElementById('address');
+            const error = document.getElementById('error');
+
+            if("geolocation" in navigator){
+                error.textContent = "Fetching Location...";
+
+                try {
+                    const position = await new Promise ((resolve, reject) => {
+                        navigator.geolocation.getCurrentPosition(resolve, reject, {
+                            enableHighAccuracy: true,
+                            timeout:5000,
+                            maximumAge:0
+                        });
+                    });
+
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.logitude;
+                    const accuracy = position.coords.accuracy;
+
+                    try{
+                        const response = await fetch(
+                            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&zoom=18&addressdetails=1`
+                        );
+                        const data = await response.json();
+
+                        if(data && data.display_name){
+                            address.textContent = data.display_name;
+                        }else {
+                            address.textContent = "Address Not Fuund"
+                        }
+                    } catch (apiError){
+                        address.textContent = "Error fetching address";
+                        console.log("Api Error: " , apiError);
+                    }
+                }catch(err){
+                    info.style.display = 'none';
+
+                    switch (error.code){
+                        case err.PERMISSION_DENIED:
+                            error.textContent = "User denied permission";
+                            break;
+                        case err.POSITION_UNAVAILABLE:
+                            error.textContent = "Location not available";
+                            break;
+                        
+                        default:
+                            error.textContent = "API Error";
+                            break;
+                    }
+                }
+            }
+            else{}
+        }
+    </script>
+    
+</body>
+</html>

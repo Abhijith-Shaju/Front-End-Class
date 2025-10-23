@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <!-- element selector -->
+    <h1>Element Selector</h1>
+
+    <!-- id selector -->
+    <p id="p1">ID Selector </p>
+
+    <!-- class selector -->
+
+    <div class="div1">Class</div>
+    <div class="div1">Class</div>
+    <div class="div1">Class</div>
+    <script>
+        // ensures that the entire document loaded before js takes action;
+        $(document).ready(function(){
+            $('h1').click(function(){
+                console.log('click on element');
+            });
+
+            $('#p1').click(()=>{
+                $('#p1').css('background-color', 'blue')
+            });
+
+            $('.div1').click(()=>{
+                $('.div1').css('color', 'red')
+            });
+
+        })
+
+    </script>
+</body>
+</html>
