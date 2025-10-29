@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="w-1/2 mx-auto p-8 bg-white rounded-xl shadow-2xl ">
+        <h1 class="text-center font-bold text-3xl my-8">Dynamic Task Manager</h1>
+
+        <div class="flex gap-2 my-4">
+            <input type="text" class="border-2 border-gray-300 w-full px-8 py-2 rounded-xl shadow-md" placeholder="Enter Your Task" id="input"> 
+            <button class="px-4 py-2 rounded-xl bg-blue-500 font-bold text-white w-32" id="btn">Add Task</button>
+        </div>
+
+        <ul id="task-list" class="">
+
+        </ul>
+    </div>
+
+<script>
+        $(document).ready(()=>{
+            $('#btn').click(()=>{
+                let x = $('#input').val();
+                
+                if (x.trim() !== '') {
+                    let newItem = $('<li>' + x + ' <button class="edit-btn px-4 py-2 rounded-xl bg-green-500 font-bold text-white w-32">Edit</button><button class="delete-btn px-4 py-2 rounded-xl bg-red-500 font-bold text-white w-32">Delete</button></li>')
+
+                    $('#task-list').append(newItem);
+                    
+                    $('#input').val('');
+                }
+            });
+            $('#task-list').on('click', '.delete-btn', function() {
+                $(this).closest('li').remove();
+            });
+
+            $('#task-list').on('click', '.edit-btn', function() {
+                let $li = $(this).closest('li');
+                let textNode = $li.contents().first()[0];
+                let oldText = textNode.nodeValue.trim();
+                
+                let y = prompt("Enter the new Task", oldText);
+
+                if (y !== null) { 
+                    textNode.nodeValue = y + ' '; 
+                }
+            });
+        });
+    </script>    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div id="box" style="font-size: xx-large;">Jquery Effect</div>
+
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="toggle">hide/show</button>
+
+    <button id="fadein">FadeIN</button>
+    <button id="fadeout">FadeOut</button>
+    <button id="fadetoggle">FadeToggle</button>
+
+
+    <button id="slideUp">SlideUp</button>
+    <button id="slideDown">SlideDown</button>
+    <button id="slidetoggle">SlideToggle</button>
+
+
+
+    <script>
+        $(document).ready(()=>{
+            $('#hidebtn').click(()=>{
+                $('#box').hide();
+            })
+            
+            $('#showbtn').click(()=>{
+                $('#box').show();
+            })
+            
+            $('#toggle').click(()=>{
+                $('#box').toggle('slow', 'linear');
+            })
+
+            $('#fadein').click(()=>{
+                $('#box').fadeIn();
+            })
+
+            $('#fadeout').click(()=>{
+                $('#box').fadeOut();
+            })
+            
+            $('#fadetoggle').click(()=>{
+                $('#box').fadeToggle();
+            })
+
+            $('#slideUp').click(()=>{
+                $('#box').slideUp();
+            })
+
+            $('#slideDown').click(()=>{
+                $('#box').slideDown();
+            })     
+            
+            $('#slidetoggle').click(()=>{
+                $('#box').slideToggle();
+            })       
+
+        })
+    </script>
+</body>
+</html>

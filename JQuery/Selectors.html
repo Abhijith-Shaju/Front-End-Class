@@ -6,6 +6,18 @@
     <title>Document</title>
     <script src="jquery-3.7.1.min.js"></script>
 
+    <style>
+        .divNew{
+            background-color: green;
+        }
+
+        .huge{
+            font-size: xx-large;
+        }
+        .white{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- element selector -->
@@ -18,7 +30,9 @@
 
     <div class="div1">Class</div>
     <div class="div1">Class</div>
-    <div class="div1">Class</div>
+
+    <div class="divNew">Class</div>
+
     <script>
         // ensures that the entire document loaded before js takes action;
         $(document).ready(function(){
@@ -33,6 +47,12 @@
             $('.div1').click(()=>{
                 $('.div1').css('color', 'red')
             });
+
+            $('.divNew').click(()=>{
+                $('.divNew').addClass('huge white')
+            });
+
+
 
         })
 
