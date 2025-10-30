@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="outer" class="p-8 bg-blue-400 m-4">
+        Outer division
+        <div id="middle" class="p-8 bg-green-400 m-4">
+            Middle Division
+            <div id="inner" class="p-8 bg-red-400 m-4">
+                Inner Division
+                <button id="button" class="block px-4 py-2 text-white font-bold text-2xl bg-blue-600 rounded-3xl m-4">Click me</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("outer").addEventListener("click", () => {
+            alert("This is the outer Division");
+        })
+        
+        document.getElementById("middle").addEventListener("click", () => {
+            alert("This is the middle Division");
+        })
+        
+        document.getElementById("inner").addEventListener("click", () => {
+            alert("This is the inner Division");
+        })
+
+        document.getElementById("button").addEventListener("click", () => {
+            alert("This is the Button");
+        })
+    </script>
+</body>
+</html>

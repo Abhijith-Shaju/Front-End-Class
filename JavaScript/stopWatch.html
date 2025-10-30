@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <p id="watch"></p>
+
+    <script>
+        
+        let i;
+        function start(){
+            // clearInterval(i);
+            i = setInterval(showDate, 1000);
+        }   
+        function showDate(){
+            document.getElementById("watch").innerText=new Date();
+            document.getElementById("watch").style.cssText='font-size:50px; color: red; font-style: italic;';
+        }
+
+        function stop(){
+            clearInterval(i);
+        }
+
+    </script>
+</body>
+</html>
