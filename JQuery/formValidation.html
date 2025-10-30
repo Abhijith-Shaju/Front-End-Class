@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="w-2/5 mx-auto m-8 rounded-2xl bg-white shadow-2xl p-8">
+        
+        <h1 class="text-4xl font-bold">Validation Form</h1>
+        <form action="" >
+            <div class="py-4">
+                <label for="name" class="block text-xl"> Username: </label>
+                <input type="text" name="name" id="name" placeholder="Enter username" class="border-[1px] w-full border-gray-500 p-2 rounded-md">
+            </div>
+            
+            <div class="py-4">
+                <label for="email" class="block text-xl">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Enter email" class="border-[1px] w-full border-gray-500 p-2 rounded-md">
+            </div>
+            
+            <div class="py-4">
+                <label for="pass" class="block text-xl">Password : </label>
+                <input type="password" name="pass" id="password" placeholder="Enter password" class="border-[1px] w-full border-gray-500 p-2 rounded-md">
+            </div>
+            
+            <button type="submit" id="submit" class="px-4 py-2 bg-blue-500 text-2xl text-white rounded-md w-full">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        $('#submit').click(()=>{
+            const name = $('#name').val().trim();
+            const email = $('#email').val();
+            const password = $('#password').val();
+            
+            if(name === ""){
+                alert("Name must be FILLED!")
+                return false
+            }
+
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+
+            if(!email.match(emailPattern)){
+                alert("Invalid Email Address")
+                return false
+            }
+
+            if(password.length < 6){
+                alert("Password should be greater than 6");
+                return false
+            }
+
+            alert("Form has been submitted")
+            return true
+        });
+    </script>
+    
+</body>
+</html>
