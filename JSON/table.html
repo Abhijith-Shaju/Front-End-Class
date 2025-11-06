@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JQuery/jquery-3.7.1.min.js"></script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Employee Data</h2>
+    <table>
+        <thead>
+            <tr><th>Name</th> <th>Position</th> <th>Department</th></tr>
+        </thead>
+
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script>
+        const employeesJSON = `[
+            {"name": "Abhijith", "position": "Senior Software Developer", "department": "CSE"},
+            {"name": "Abhinav", "position": "Junior Software Developer", "department": "ECE"},
+            {"name": "Hariharan", "position": "Software Developer Intern", "department": "MCE"}
+        ]`;
+
+        const employee = JSON.parse(employeesJSON)
+        const tablebody = document.getElementById("table-body");
+
+        employee.forEach(element => {
+            const row = document.createElement('tr')
+            row.innerHTML = `<td> ${element.name} </td> <td> ${element.position} </td> <td> ${element.department}</td>`
+            tablebody.appendChild(row);
+        });
+    </script>
+    
+</body>
+</html>
