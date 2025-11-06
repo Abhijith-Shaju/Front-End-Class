@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Example</title>
+    <script src="../JQuery/jquery-3.7.1.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+     <style>
+        .card{
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        #user-list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+     </style>
+</head>
+<body>
+
+    <h2>User List</h2>
+    <div id="user-list"></div>
+    <script>
+        const users = [
+            {"name": 'Abhi', "email": 'abhi@gmail.com', "age": 21, "city": "delhi"},
+            {"name": 'ABC', "email": 'ABC@gmail.com', "age": 23, "city": "kolkata"},
+            {"name": 'DEF', "email": 'DEF@gmail.com', "age": 22, "city": "kochi"},
+            {"name": 'XYZ', "email": 'XYZ@gmail.com', "age": 29, "city": "mumbai"},
+            {"name": 'XYZ', "email": 'XYZ@gmail.com', "age": 29, "city": "mumbai"},
+            {"name": 'XYZ', "email": 'XYZ@gmail.com', "age": 29, "city": "mumbai"},
+            {"name": 'XYZ', "email": 'XYZ@gmail.com', "age": 29, "city": "mumbai"}
+
+        ];
+
+        $.each(users, (index, user) => {
+            const card = 
+                    `<div class="card">
+                        <h3>${user.name}</h3>
+                        <p>Age: ${user.age}</p>
+                        <p>${user.city}</p>
+                        <p>Contact: ${user.email}</p>
+                    </div>`;
+            $("#user-list").append(card)    
+        });
+    </script>
+</body>
+</html>
