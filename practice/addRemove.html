@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-10">
+    <input type="text" id="inp" placeholder="Items" value=""> 
+
+    <button id="add" class="bg-green-500 py-2 px-4 mx-4 rounded-3xl">Add</button>
+    <button id="remove" class="bg-red-500 py-2 px-4 mx-4 rounded-3xl">Remove</button>
+    <ul id="list"></ul>
+
+    <script>
+        document.getElementById("add").addEventListener('click', function(){
+            const list = document.getElementById('list');
+
+            const data = document.getElementById("inp").value;
+            
+            const li = document.createElement('li');
+            li.innerText = `${data}`
+            list.appendChild(li)
+        })
+
+        document.getElementById('remove').addEventListener('click', function(){
+            document.getElementById("list").lastElementChild.remove();
+        })
+    </script>
+</body>
+</html>
