@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JQuery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    
+    <div id="questions" class="flex flex-col">
+
+    </div>
+    <script>
+        const qns = {
+            "qn1": "ans1",
+            "qn2": "ans2"
+        } 
+
+        $.each(qns, (question, answer) => {
+            const ele = document.createElement('div');
+            ele.innerHTML=question;
+            ele.id=question;
+            ele.classList.add("p-4", "bg-gray-200", "text-center");
+
+            document.getElementById('questions').appendChild(ele);
+        });
+
+    </script>
+</body>
+</html>

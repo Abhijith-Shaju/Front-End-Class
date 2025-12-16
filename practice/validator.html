@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="form" >
+        <input type="text" name="name" id="name">
+        <input type="number" name="age" id="age">
+        <input type="email" name="email" id="email">
+        <button type="button" onclick="clicked()"> submit</button>
+    </form>
+
+    <script>
+        function clicked(){
+            const age = document.getElementById('age');
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+
+            if(name.value.trim() === ""){
+                alert("Enter a valid name");
+                return;
+            }
+
+            if(age.value < 18){
+                alert("You are Underaged");
+                return;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,}/;
+            if(!emailPattern.test(email.value)){
+                alert("Invalid Email Address");
+                return;
+            }
+
+            alert("Form Submited");
+            document.getElementById('form').submit();
+
+        }
+    </script>    
+</body>
+</html>

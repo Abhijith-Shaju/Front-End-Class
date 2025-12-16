@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../JQuery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="w-full mt-32 flex flex-col items-center justify-center">
+        <img id="main-img" src="../Resources/img1.jpg" alt="" onclick="lightHouse(this)" class="h-64">
+        <div class="flex space-x-4 m-4">
+            <img src="../Resources/img1.jpg" alt="" class="h-16 " onclick="show(this)">
+            <img src="../Resources/img2.jpg" alt="" class="h-16 " onclick="show(this)">
+            <img src="../Resources/img3.jpg" alt="" class="h-16 " onclick="show(this)">
+        </div>
+
+        <div id="lightHouse" class="absolute inset-0 bg-gray-950/50 hidden justify-center items-center" onclick="this.classList.add('hidden')">
+            <img id="light" src="" alt="" class="h-96 ">
+        </div>
+    </div>
+
+
+    <script>
+        const main = document.getElementById("main-img");
+        function show(x){
+            main.src=x.src;
+        }
+
+        function lightHouse(x){
+            document.getElementById('lightHouse').classList.remove('hidden');
+            document.getElementById('lightHouse').classList.add('flex');
+            document.getElementById('light').src = x.src;
+        }
+    </script>
+
+</body>
+</html>

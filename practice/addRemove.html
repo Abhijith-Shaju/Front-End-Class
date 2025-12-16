@@ -25,7 +25,9 @@
         })
 
         document.getElementById('remove').addEventListener('click', function(){
-            document.getElementById("list").lastElementChild.remove();
+            if(document.getElementById("list").lastElementChild){
+                document.getElementById("list").lastElementChild.remove();
+            }
         })
     </script>
 </body>

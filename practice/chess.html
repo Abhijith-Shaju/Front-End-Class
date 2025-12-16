@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .cell:hover::before,
+        .cell:hover::after{
+            content: "";
+            position: absolute;
+            z-index: 10;
+            background-color: red;
+            opacity: 0.25;
+            pointer-events: none;
+        }
+        .cell:hover::before{
+            top: -100vh;
+            bottom: -100vh;
+            left: 0;
+            right: 0;
+        }
+        .cell:hover::after{
+            top: 0;
+            bottom: 0;
+            left: -100vh;
+            right: -100vh;
+        }
+    </style>
+</head>
+<body>  
+    <div id="chess-board" class="grid grid-cols-8 mt-32 mx-auto gap-0 w-max h-auto border-4 border-black overflow-hidden">
+    </div>
+    <script>
+        const board = document.getElementById('chess-board');
+        const one = [0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0];
+
+        for(let i = 0; i < 4; i++){
+            one.forEach(element => {
+                if(element == 1){
+                    const cell = document.createElement('div');
+                    cell.className = " cell relative h-16 w-16 bg-black";
+                    board.appendChild(cell);
+                }else{
+                    const cell = document.createElement('div');
+                    cell.className = "cell relative h-16 w-16 bg-white";
+                    board.appendChild(cell);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

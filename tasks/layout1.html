@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white relative">
+    <header class="flex flex-row justify-between items-center w-full px-14 py-6 bg-orange-500 text-white">
+        <h1 class="font-bold text-4xl ">My Blog.</h1>
+        <nav class="space-x-8 font-bold text-2xl">
+            <a href="#home">Home</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="text-center text-4xl my-8">Welcome To Travel Blog</h2>
+        <div class="flex flex-row gap-8 mx-auto w-5/6 ">
+            <div class="w-2/3 my-4 rounded-2xl shadow-2xl p-6 text-lg bg-orange-50">
+                <p class="inline text-xl ">Enquery.</p>
+                <button id="form-btn" class="ml-8 bg-orange-500 text-white font-bold rounded-2xl px-4 py-2 inline">Show Form</button>
+
+                <form id="form" action="" class=" mt-8 bg-white p-8 rounded-2xl">
+                    <div class="flex items-center">    
+                        <label for="name" class="inline text-2xl font-bold">Name: </label>
+                        <input name="name" type="text" placeholder="Joe" class="inline mb-4 px-4 py-2 ml-4 rounded-lg w-full">
+                    </div>
+                    <div class="flex items-center">
+                        <label for="email" class="inline text-2xl font-bold">Email: </label>
+                        <input name="email" type="email" placeholder="Joe@gmail.com" class="inline mb-4 px-4 py-2 ml-4 rounded-lg w-full">
+                    </div>
+                    <div class="flex items-center">
+                        <label for="phone" class="inline text-2xl font-bold">Phone: </label>
+                        <input name="phone" type="phone" placeholder="+91 12345 67890" class="inline  mb-4 px-4 py-2 ml-4 rounded-lg w-full">
+                    </div>
+                    <button class="w-full mx-auto bg-orange-500 text-white mt-8 py-2 rounded-3xl shadow-xl">Submit</button>
+                    
+                </form>
+            </div>
+            <div class="flex flex-col grow mr-8">
+                <div class="bg-orange-500 text-white shadow-2xl rounded-md my-3 px-4 py-2 pl-8 h-32 text-2xl font-bold flex items-center hover:bg-orange-600 duration-75" >Visit Places  <span class="">-></span></div>
+                <div class="bg-orange-500 text-white shadow-2xl rounded-md my-3 px-4 py-2 pl-8 h-32 text-2xl font-bold flex items-center hover:bg-orange-600 duration-75" >Register as a Traveller  <span>-></span></div>
+                <div class="bg-orange-500 text-white shadow-2xl rounded-md my-3 px-4 py-2 pl-8 h-32 text-2xl font-bold flex items-center hover:bg-orange-600 duration-75" >About Page  <span>-></span></div>
+            </div>
+        </div>
+
+        <div id="about" class="w-2/3 mx-auto text-center my-16 bg-orange-50 p-8 rounded-2xl"> 
+            <h2 class="text-3xl font-bold my-4">This is About</h2>
+            <p class="mx-auto text-xl ">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat modi accusamus, rerum esse qui sunt odit quod quos quam eum aliquam laboriosam, repellendus inventore eveniet error accusantium hic illum ratione.
+                Aliquam deleniti omnis quidem sit quae asperiores vel repudiandae dolore iure. Asperiores laudantium similique ducimus tenetur laboriosam quia reiciendis, vitae, tempore et eveniet numquam, magnam velit officiis aut aspernatur sed?
+                Tempora deleniti non possimus quisquam cum praesentium libero, esse est voluptatem assumenda voluptate porro suscipit corrupti dolor illo ex laudantium natus fugiat magnam ad illum. Ut accusamus provident dolore asperiores.
+            </p>
+        </div>
+    </main>
+    <footer class="w-full py-8 px-16 text-center font-bold text-xl text-white bg-orange-500 ">
+        <p>Site created by Abhijith Shaju.</p>
+
+    </footer>
+
+    <script>
+        const btn = document.getElementById("form-btn");
+        const form = document.getElementById("form");
+
+        btn.addEventListener('click', ()=> {
+            form.classList.toggle("hidden");
+        })
+
+    </script>
+    
+</body>
+</html>
